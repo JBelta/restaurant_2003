@@ -24,6 +24,14 @@ class Restaurant
     time_change = current_time + hours
     time_change.to_s + (":00")
   end
+  def open_for_lunch?
+    if @time.to_i < 15
+      print true
+    else
+      @time.to_i > 15
+      print false
+    end
+
 end
 
 restaurant = Restaurant.new("10:00", "Fuel Cafe")
